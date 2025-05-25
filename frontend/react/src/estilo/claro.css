@@ -1,0 +1,13 @@
+@import './main.css';
+
+:root {
+    /* Colors */
+    --primary: #7400E6;
+    --danger: #D80000;
+    --warning: #E6B000;
+    --background: #FAFAFA;
+    --foreground: #ffffff;
+    --text-primary: #202020;
+    --text-secondary:  var(--text-secondary)666;
+    --border: #dddddd;
+}

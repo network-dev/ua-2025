@@ -1,0 +1,91 @@
+/* Estilos para la página de Accesibilidad */
+
+/* Contenido principal */
+.accesibilidad-contenido {
+  background-color: var(--foreground);
+  flex: 1;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.accesibilidad-contenido p {
+  text-align: left;
+}
+
+/* Estilos para títulos */
+.accesibilidad-titulo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.accesibilidad-subtitulo {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 30px 0 20px;
+  text-align: left;
+}
+
+/* Secciones */
+.accesibilidad-seccion {
+  margin-bottom: 30px;
+}
+
+/* Grupo de opciones de radio */
+.radio-option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* margin-left: 2em; */
+}
+
+/* Opciones de radio estilizadas */
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #d4d4d8;
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary); /* Color morado como en la imagen */
+}
+
+.radio-option input[type="radio"]:checked {
+  border-color: var(--primary);
+}
+
+.radio-option label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+
+  .accesibilidad-contenido {
+    padding: 20px;
+  }
+}

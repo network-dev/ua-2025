@@ -1,0 +1,100 @@
+.landing-page-banner {
+  position: absolute;
+  top: 55%;
+  left: 15%;              
+  transform: translateY(-50%); /* centra verticalmente */
+  color: white;
+  pointer-events: none;    /* para que no interfiera con clicks en la imagen */
+  text-align: left;
+}
+
+.landing-page-banner-tittle {
+  /* font-size: 5rem; */
+   font-size: clamp(2rem, 5vw, 5.2rem);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* para que se lea sobre la imagen */ 
+  margin-top: 1em;
+}
+
+.landing-page-banner-subtittle {
+  /* font-size: 1.8rem; */
+  font-size: clamp(1.2rem, 2.8vw, 2rem);
+  margin-top: 1em;
+  margin-right: .5em;
+}
+
+.landing-page-assets-content {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.landing-page-asset-list {
+  display: flex;
+  flex-wrap: wrap; 
+  width: 100%;
+  gap: 2rem; 
+  justify-content: center;
+}
+
+.landing-page-asset-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.landing-page-asset-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 3px;
+}
+
+.landing-page-asset-card {
+  flex: 1 1 14%; /* ancho fijo para que quepan 6 en pantalla */
+  min-width: 170px; /* evita que sean demasiado pequeños en pantallas pequeñas */
+  max-width: 180px;
+  height: 280px; /* ajusta altura proporcionalmente */
+  width: auto; /* para que no limite por width */
+  box-sizing: border-box;
+  background-color: #832e2e;
+  background: var(--foreground);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} 
+
+.landing-page-asset-card:hover {
+  transform: translateY(-5px);
+}
+
+.landing-page-asset-card .asset-foto {
+    height: 180px;
+    padding-bottom: 10px;
+}
+
+.landing-page-asset-card .asset-name {
+    font-size: 15px;
+    padding-left: 0;
+    text-align: left;
+} 
+
+.landing-page-asset-card .user-avatar {
+  width: 27px;
+  height: 27px;
+  margin-right: 2px;
+}
+
+.landing-page-asset-card .user-name {
+  font-size: 12px;
+}
+
+.landing-page-titulo-section {
+  text-align: left;
+  margin-top: 50px;
+}
+
+/* Cuando la pantalla es más pequeña, pasa a 2 por fila */
+@media (max-width: 900px) {
+  .asset-card {
+    flex: 1 1 45%; /* base 45%, para dos por fila con espacio */
+    min-width: 140px;
+    max-width: none;
+  }
+}

@@ -1,0 +1,387 @@
+/* Estilos generales */
+.perfil-usuario-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos del header del perfil */
+.perfil-usuario-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.perfil-usuario-avatar {
+  width: 120px;
+  height: 120px;
+  margin-right: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--text-primary);
+}
+
+.perfil-usuario-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfil-usuario-info {
+  font-size: 28px;
+  color: var(--text-primary);
+}
+
+/* Estilos para los esqueletos de carga */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.perfil-usuario-header.skeleton {
+  height: 160px;
+}
+
+.perfil-usuario-avatar.skeleton {
+  width: 120px;
+  height: 120px;
+}
+
+.perfil-usuario-info.skeleton {
+  width: 300px;
+  height: 40px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  
+  .perfil-usuario-avatar {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+  
+  .perfil-usuario-info h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .perfil-usuario-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .perfil-usuario-avatar {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Media Queries para hacer responsive el perfil */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .perfil-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .perfil-menu {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2rem;
+    order: 1; /* Cambiado de order: 2 a order: 1 para que aparezca primero */
+  }
+  
+  .perfil-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .perfil-menu li {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 8px 12px;
+  }
+  
+  .perfil-contenido {
+    order: 2; /* Cambiado de order: 1 a order: 2 para que aparezca después */
+    width: 100%;
+  }
+  
+  .perfil-info {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .perfil-foto-contenedor {
+    align-self: center;
+  }
+  
+  .perfil-datos {
+    text-align: left;
+  }
+  
+  /* Assets grid para tablet */
+  .asset-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile (hasta 768px) */
+@media (max-width: 768px) {
+  .perfil-page {
+    flex-direction: column;
+    padding: 0.5rem;
+    min-height: calc(100vh - 60px);
+  }
+  
+  .perfil-menu {
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: var(--radius-sm);
+    order: 1; /* Asegurar que aparezca primero */
+  }
+  
+  .perfil-menu ul {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .perfil-menu ul::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .perfil-menu li {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 6px 12px;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  .perfil-contenido {
+    width: 100%;
+    padding: 0;
+    order: 2; /* Aparece después del menú */
+  }
+  
+  .perfil-card,
+  .perfil-info {
+    margin: 0;
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+  }
+  
+  .perfil-info {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .perfil-foto {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .perfil-datos {
+    text-align: left;
+  }
+  
+  .perfil-datos label {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+  }
+  
+  .btn-upload,
+  .btn-guardar {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+  }
+  
+  /* Assets grid para móvil */
+  .asset-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .asset-card {
+    max-width: 100%;
+  }
+  
+  .asset-foto img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Formularios en móvil */
+  .form-container {
+    width: 95%;
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .purple-input-container {
+    margin: 1.5rem 0 1rem !important;
+  }
+  
+  input,
+  textarea,
+  select {
+    padding: 12px 14px;
+    font-size: 1.6rem;
+  }
+  
+  button,
+  .label-as-button {
+    padding: 12px 20px;
+    font-size: 1.4rem;
+  }
+}
+
+
+
+/* Mobile pequeño (hasta 480px) */
+@media (max-width: 480px) {
+  .perfil-info {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .perfil-foto {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .perfil-datos h3 {
+    font-size: 1.4rem;
+  }
+  
+  .perfil-datos label {
+    font-size: 1.3rem;
+  }
+  
+  .perfil-menu li {
+    padding: 5px 8px;
+    min-width: 70px;
+  }
+  
+  .asset-foto img {
+    height: 180px;
+  }
+  
+  .form-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Header responsive si es necesario */
+  .header-container {
+    padding: 0.5rem;
+  }
+  
+  .search-container {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Mejoras adicionales para la experiencia móvil */
+@media (max-width: 768px) {
+  /* Hacer que los elementos táctiles sean más grandes */
+  .perfil-menu li {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-upload,
+  .btn-guardar {
+    min-height: 44px;
+  }
+  
+  /* Mejorar la legibilidad en pantallas pequeñas */
+  .perfil-datos small {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  /* Espaciado mejorado para móvil */
+  .perfil-datos section {
+    gap: 0.8rem;
+  }
+  
+  /* Hacer que las imágenes de assets sean más responsivas */
+  .asset-card {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  
+  .asset-info {
+    padding: 1rem;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Orientación landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .perfil-info {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .perfil-foto-contenedor {
+    flex: 0 0 auto;
+  }
+  
+  .perfil-datos {
+    flex: 1;
+  }
+}
+
+/* Ajustes específicos para el tema oscuro en móvil */
+@media (max-width: 768px) {
+  [data-theme="oscuro"] .perfil-menu {
+    background: var(--foreground);
+    border: 1px solid var(--border-soft);
+  }
+  
+  [data-theme="oscuro"] .perfil-info {
+    background: var(--foreground);
+    border: 1px solid var(--border-soft);
+  }
+}

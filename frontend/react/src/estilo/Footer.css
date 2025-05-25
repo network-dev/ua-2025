@@ -1,0 +1,141 @@
+footer {
+    background: var(--foreground);
+    color: var(--text-primary); 
+    padding: 3rem 2rem;
+    font-size: 1.4rem;
+    margin-top: 15rem; 
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: flex-start;
+    align-self: flex-start !important;
+  }
+  
+  .footer-brand {
+    flex: 1;
+  }
+  
+  .footer-logo {
+    height: 80px;
+    margin-bottom: 0.02em;
+  }
+  
+  .footer-columns {
+    display: flex;
+    gap: 4rem;
+    flex: 2;
+    align-self: flex-start !important;
+  }
+  
+  .footer-col h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-col a {
+    display: block; 
+    margin: 0.3rem 0;
+    transition: color 0.2s;
+  }
+
+  .footer-link{
+    color: var(--text-primary);
+    &:visited{
+        color: var(--text-primary);
+    }
+  }
+
+  .footer-socials a {
+    font-size: 2rem;
+  }
+
+
+  
+  .footer-categorias-col {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .footer-categorias-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  
+
+  
+  .footer-extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 2.5em;
+    width: 80%;
+  }
+  
+  .footer-bottom {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+   
+  .footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .footer-socials a {
+    font-size: 2rem;
+    transition: color 0.3s;
+  }
+
+
+@media (max-width: 730px) {
+
+  .footer-extra {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  .footer-socials {
+    margin-top: 2em;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .footer-columns {
+      justify-content: center;
+      margin-top: 1em;
+      margin-bottom: 1em;
+  }
+    
+  .footer-bottom { 
+      justify-content: center;
+      margin-bottom: 2rem;
+  }
+
+  .footer-extra {
+    margin-top: 2rem;
+  }
+}
+
+  
+  

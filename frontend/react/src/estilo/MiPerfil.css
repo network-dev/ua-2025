@@ -1,0 +1,363 @@
+.perfil-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background);
+  }
+  
+  .cerrar-sesion {
+    width: 100%;
+  }
+  
+  .perfil-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+  }
+  
+  .perfil-box {
+    background: var(--primary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .perfil-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .subir-foto {
+    background-color: var(--primary);
+    color: var(--text-button);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+  }
+  
+  .nota {
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+  
+  .datos-usuario h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  
+  .datos-usuario p {
+    text-align: left;
+    margin: 0.5rem 0;
+    color: #444;
+  }
+  .perfil-page {
+    display: flex;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .perfil-menu {
+    width: 200px;
+    padding: 1rem;
+    background: var(--background);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-right: 2rem;
+    height: fit-content;
+  }
+  
+  .perfil-menu li {
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+  
+  .perfil-card {
+    background: var(--background);
+    border-radius: 12px;
+    padding: 3rem 4rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    max-width: 640px;
+    width: 100%;
+  }
+  
+  .perfil-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .perfil-foto img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-upload {
+    background: var(--primary);
+    color: var(--text-button);
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .perfil-datos {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .perfil-datos h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .perfil-datos label {
+    margin-top: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  .perfil-datos small {
+    color:  var(--text-secondary);
+    margin: 1rem 0;
+  }
+  
+  .btn-guardar {
+    background: var(--primary);
+    color: var(--text-button);
+    padding: 10px 18px;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  .perfil-page {
+    display: flex;
+    min-height: calc(100vh - 80px); /* Resta header si tiene altura */
+    width: 100%;
+  }
+  
+  .perfil-contenido {
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .perfil-card {
+    background: var(--background);
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  }
+
+
+.perfil-foto-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil-foto {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.foto-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-upload {
+  background: var(--primary);
+  color: var(--text-button);
+  padding: 0.4rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 0.2rem;
+}
+
+.perfil-datos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.perfil-datos section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.perfil-datos label {
+  font-weight: 600;
+}
+
+.nota {
+  color: #555;
+  margin-top: -0.5rem;
+}
+  
+  .perfil-datos label {
+    font-weight: 600;
+    margin-top: 1.2rem;
+    display: inline-block;    
+  }
+
+
+.perfil-page {
+    display: flex;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    background: var(--background);
+  }
+  
+  .perfil-menu {
+    width: 240px;
+    background: var(--foreground);
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+    margin-left: 5em;
+    border-radius: var(--radius-md);
+  }
+  
+  .perfil-menu li {
+    color: var(--text-secondary);
+  }
+  
+  .perfil-menu li.activo {
+    background-color: var(--primary-transparent);
+    color: var(--primary);
+    font-weight: bold;
+    &:hover{
+        background-color: var(--primary-transparent)
+    }
+  }
+  
+  .perfil-menu li:hover {
+    background-color: var(--foreground-hover);
+    color: var(--primary);
+  }
+  
+  
+  .perfil-info {
+    display: flex;
+    gap: 4rem;
+    padding: 3rem 4rem;
+    background: var(--foreground);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    max-width: 1100px;
+    margin: 0 auto;
+    color: var(--text-primary);
+    text-align: left !important;
+  }
+  
+  .perfil-foto {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .foto-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-upload {
+    background: var(--primary);
+    color: var(--text-button);
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn-upload:hover {
+    background: var(--primary-hover);
+  }
+  
+  .perfil-datos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .perfil-datos section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .perfil-datos label {
+    font-weight: 600;
+    margin-top: 1.2rem;
+    display: inline-block;
+    color: var(--text-primary);
+  }
+  /* .perfil-datos input, .perfil-datos textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--foreground);
+    color: var(--text-primary);
+  }
+  
+  .perfil-datos input:focus, .perfil-datos textarea:focus {
+    outline: 2px solid var(--primary);
+  } */
+  
+  .perfil-datos small {
+    color: var(--text-secondary);
+  }
+  
+  .btn-guardar {
+    background: var(--primary);
+    color: var(--text-button);
+    padding: 0.6rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radius-sm);
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn-guardar:hover {
+    background: var(--primary-hover);
+  }
+  

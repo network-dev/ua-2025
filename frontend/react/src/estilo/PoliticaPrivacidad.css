@@ -1,0 +1,118 @@
+.sobre-nosotros {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    background-color: var(--background);
+    font-family: var(--font);
+}
+  
+.columna {
+    background-color: var(--foreground);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    flex: 1;
+    min-width: 320px;
+    transition: all var(--transition-normal);
+}
+  
+.columna h1,
+.columna h2,
+.columna h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+  
+.columna p {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--text-md);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+  
+.columna ul {
+    list-style-type: disc;
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    background-color: var(--foreground);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+  
+th {
+    background-color: var(--primary);
+    color: var(--text-button);
+    text-align: left; /* Alineación izquierda para encabezados */
+    padding: var(--spacing-sm);
+    font-weight: 600;
+}
+  
+td {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    text-align: left; /* Alineación izquierda para celdas */
+}
+  
+  
+.card {
+    transition: transform var(--transition-normal);
+}
+  
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadow-lg);
+}
+  
+
+.legal-notices {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    max-width: 600px;
+    text-align: left; /* Alinea todo el contenido a la izquierda */
+    margin: auto;
+}
+  
+  .legal-notices h3 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .legal-notices ul {
+    padding-left: var(--spacing-md);
+    list-style-type: disc;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .legal-notices li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+    color: var(--text-primary);
+  }
+  
+  .legal-notices p {
+    font-size: var(--text-md);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-sm);
+  }
+  
+  .legal-notices a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .legal-notices a:hover {
+    text-decoration: underline;
+  }
+  

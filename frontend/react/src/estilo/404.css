@@ -1,0 +1,67 @@
+.not-found-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--spacing-xl);
+    min-height: 80vh;
+    background-color: var(--background);
+  }
+  
+  .not-found-box {
+    max-width: 500px;
+    background-color: var(--foreground);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+  
+  .error-code {
+    font-size: 7rem;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .error-message {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .error-subtext {
+    font-size: var(--text-md);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  
+  .astronauta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .astronauta-img {
+    width: 320px;
+    max-width: 100%;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .astronauta-img {
+    width: 220px; /* puedes ajustar según el tamaño deseado */
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--primary);
+    background-color: var(--foreground);
+  }
+  
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+  

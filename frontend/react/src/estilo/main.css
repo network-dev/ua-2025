@@ -1,0 +1,485 @@
+/* CSS global */
+
+/* Importación de la tipografía INTER */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Tipografías para dislexia */
+/* OpenDyslexic Regular */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+    font-weight: 300; 
+    font-style: normal;
+}
+
+.assets3d-layout, .assets-page {
+    display: flex;
+}
+
+/* OpenDyslexic Italic */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Italic.woff2') format('woff2');
+    font-weight: 300; 
+    font-style: italic;
+}
+
+/* OpenDyslexic Bold */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Bold.woff2') format('woff2');
+    font-weight: 700; 
+    font-style: normal;
+}
+
+/* OpenDyslexic Bold Italic*/
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Bold-Italic.woff2') format('woff2');
+    font-weight: 700; 
+    font-style: italic;
+}
+
+/* Variables del proyecto */
+:root {
+    /* Typography */
+    --font: 'Inter', sans-serif;
+    --font-alt: 'Courier New', monospace;
+    --font-dyslexia: 'OpenDyslexic', normal;
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-xxl: 32px;
+  
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 40px;
+  
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 16px;
+  
+    /* Shadows */
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  
+    /* Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+
+    /* Tema claro */
+    --primary: #7400E6;
+    --primary-transparent: #7600E632;
+    --primary-hover: #7700e6c5;
+    --secondary: #777777; 
+    --secondary-hover: #494949; 
+    --danger: #D80000;
+    --danger-hover: #7c0000;
+    --warning: #E6B000;
+    --warning-hover: #b67d13;
+    --background: #FAFAFA;
+    --foreground: #ffffff;
+    --foreground-hover: #eeeeee;
+    --text-primary: #202020;
+    --text-button: #FAFAFA;
+    --text-secondary:  #666;
+    --border: #dddddd;
+    --border-soft: #f3f3f3;
+    --border-soft2: #e6eaf7;
+    --link-color: #0000EE; /* Azul estándar */
+    --link-hover: #551A8B; /* Púrpura oscuro estándar */
+    --link-visited: #551A8B; /* Igual que hover */
+}
+
+/* Tema oscuro */
+[data-theme="oscuro"] {
+    --primary: #36F6E2;
+    --primary-transparent: #36F6E232;
+    --primary-hover: #36f6e3c5;
+    --secondary: #cccccc;
+    --secondary-hover: #a7a7a7;
+    --background: #212121;
+    --foreground: #303030;
+    --foreground-hover: #454545;
+    --text-primary: #ffffff;
+    --text-button: #212121;
+    --text-secondary: #c2c2c2;
+    --link-color: #4a91e3; /* Azul accesible */
+    --link-hover: #F8C32D; /* Amarillo fuerte para resaltar */
+    /* --link-visited: #B47AE0;  */
+    --link-visited: #8ae0ff; /* Púrpura accesible */
+    --border-soft: #3f3f3f;
+    --border-soft2: #313131;
+}
+
+/* Tema tritanopia */
+[data-theme="tritanopia"] {
+    --primary: #7B1C1C;
+    --primary-transparent: #7B1C1C32;
+    --primary-hover: #7B1C1Cc5;
+    /* El resto de colores son los mismos que el tema claro */
+}
+
+/* Configuración global de la plantilla */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* align-self: flex-start; */
+}
+
+html {
+    font-size: 62.5%; /* hace que 10px sean 1rem */
+}
+
+/* Cuerpo */ 
+*:not(body) { 
+    font-family: inherit;
+} 
+
+body {
+    box-sizing: border-box;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    font-family: var(--font);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: var(--background);
+    transition: font-family 0.3s ease;
+}
+
+.App {
+    background: var(--background);
+}
+
+body.dyslexic {
+    font-family: var(--font-dyslexia);
+}
+
+h1 {
+    margin-bottom: 4rem;
+}
+
+/* Para que se vean bien en cualquier tema */
+a {
+    color: var(--link-color);
+    &:hover { color: var(--link-hover); }
+    &:visited { color: var(--link-visited); }
+}
+
+/* Alteraciones tipografía */
+
+.text-bold{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 650;
+    font-style: normal;
+}
+
+.text-thin{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* SIZING */
+
+.full-width{
+    width: 100%;
+}
+
+/* Alignment */
+
+.centered {
+    text-align: center;
+}
+
+/* ---FORMULARIOS--- */
+
+.form-container {
+    background-color: var(--foreground);
+    border-radius: var(--radius-md);
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.02), 0px 105px 63px rgba(0, 0, 0, 0.1), 0px 47px 47px rgba(0, 0, 0, 0.18), 0px 12px 26px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 55rem;
+    padding: 3rem 4rem; 
+    margin-top: 5rem;
+
+    transition: padding 0.4s ease;
+    form * {
+        margin: 1rem 0;
+    }
+    @media(width >= 550px){
+        padding: 5rem 10rem;
+    }
+}
+    
+/* Para login y registro (cuadro centrado flotante)*/
+.auth-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    align-items: flex-start; /* <- Esto lo mueve hacia abajo */
+    padding-top: 4rem;        /* <- Agrega espacio desde arriba */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    min-height: 100dvh;
+    display: flex;
+    position: relative;
+    z-index: 1;      
+}
+
+
+/* BOTONES */
+
+button,
+.label-as-button {
+    padding: 13px 28px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 0.4rem;
+    border-radius: var(--radius-sm);
+    border: none;
+    background-color: var(--primary);
+    color: var(--text-button);
+    font-weight: 500;
+    font-size: 1.6rem;
+    transition: all .3s ease;
+    &:hover {
+        background-color: var(--primary-hover);
+        cursor: pointer;
+    }
+}
+
+/* INPUTS TEXT, TEXTAREA POR DEFECTO */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--foreground);
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    transition: background-color .33s ease-out;
+}
+
+input[type="radio"]{
+    padding: 0;
+}
+
+textarea {
+    overflow-y: hidden;
+    width: 100% !important;
+    font-family: inherit;
+}
+
+input:hover, 
+textarea:hover,
+select:hover {
+    background-color: var(--foreground-hover);
+    cursor: pointer;
+}
+
+
+input:focus, 
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--primary);
+}
+
+
+/* INPUTS CON ANIMACIÓN */
+
+input {
+    color: var(--text-primary);
+}
+
+.purple-input-container {
+    position: relative;
+    margin: 2rem 0 1rem !important;
+    margin-bottom: 2rem;
+
+}
+  
+.purple-input-container input[type="text"] {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 5px;
+    background-color: transparent;
+    outline: none;
+    transition: background-color .33s ease-out;
+    &:hover{
+        background-color: var(--foreground-hover);
+    }
+    &:focus {
+        background-color: var(--primary-transparent);
+        -webkit-transition: background-color 500ms ease-out;
+        -ms-transition: background-color 500ms ease-out;
+    }
+}
+  
+.purple-input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+  
+.purple-input-container input[type="text"]:focus ~ .label,
+.purple-input-container input[type="text"]:valid ~ .label {
+    top: -2.3rem;
+}
+  
+.purple-input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+  
+.purple-input-container input[type="text"]:focus ~ .underline,
+.purple-input-container input[type="text"]:valid ~ .underline {
+    transform: scaleX(1);
+}
+  
+.purple-input-container input:not([type="file"]) {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 5px 5px 5px;
+    background-color: transparent;
+    outline: none;
+    transition: background-color 0.33s ease-out;
+  }
+  
+  .purple-input-container input:not([type="file"]):hover {
+    background-color: var(--foreground-hover);
+  }
+  
+  .purple-input-container input:not([type="file"]):focus {
+    background-color: var(--primary-transparent);
+  }
+  
+  .purple-input-container input:not([type="file"]):focus ~ .label,
+  .purple-input-container input:not([type="file"]):valid ~ .label {
+    top: -20px;
+    font-size: 12px;
+    color: var(--primary);
+  }
+  
+  .purple-input-container input:not([type="file"]):focus ~ .underline,
+  .purple-input-container input:not([type="file"]):valid ~ .underline {
+    transform: scaleX(1);
+  }
+  
+
+/* .file-button {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: var(--primary);
+    color: var(--text-button);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    transition: background-color var(--transition-fast);
+  }
+  
+  .file-button:hover {
+    background-color: var(--primary-hover);
+  } */
+  
+  .file-name {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    word-break: break-word;
+  }
+
+
+  #bg-wrap {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  
+  
+  
+  .photo-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .photo-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+.align-left-force{
+    text-align: left !important;
+}
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+.enlaces-home-login-registro {
+    display: flex;
+    flex-direction: column;
+  }
+
+.enlaces-home-login-registro a {
+    margin-top: .6em;
+}
+
+.enlaces-home-login-registro a:hover {
+    color: var(--primary-hover);
+}
+
+.enlaces-home-login-registro p {
+    padding-bottom: .4em;
+    padding-top: 1em;
+
+}
+  

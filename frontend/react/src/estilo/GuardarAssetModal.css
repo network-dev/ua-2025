@@ -1,0 +1,45 @@
+.guardar-asset-modal-center-div {
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.guardar-asset-modal-h2 {
+  margin-bottom: 3rem;
+}
+
+.guardar-asset-modal-error {
+  color: var(--danger);
+}
+
+.guardar-asset-modal-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.guardar-asset-modal-li {
+  margin-bottom: 1rem;
+}
+
+.guardar-asset-modal-collection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.guardar-asset-modal-toggle-button {
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-button);
+}
+
+.guardar-asset-modal-toggle-button-added {
+  background-color: #4CAF50;
+}
+
+.guardar-asset-modal-toggle-button-default {
+  background-color: var(--primary);
+}

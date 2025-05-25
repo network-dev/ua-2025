@@ -1,0 +1,37 @@
+.terminos-legales {
+    max-width: 1000px;
+    margin: var(--spacing-xxl) auto;
+    padding: var(--spacing-xl);
+    background-color: var(--foreground);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    font-size: var(--text-md);
+    color: var(--text-primary);
+    line-height: 1.8;
+    text-align: justify; /* ← Aplica justificado global */
+  }
+  
+  .terminos-legales h1 {
+    text-align: center;
+    font-size: var(--text-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .terminos-legales h2 {
+    font-size: var(--text-lg);
+    color: var(--primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+  }
+  
+  .terminos-legales ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+  
+  .terminos-legales ul li {
+    margin-bottom: var(--spacing-sm);
+    text-align: justify; /* ← Aplica justificado también a listas */
+  }
+  

@@ -1,0 +1,62 @@
+
+  
+  .asset-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  }
+  
+  .asset-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .asset-tag {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: #7c3aed;
+    color: var(--text-button);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+  }
+  
+  .asset-info {
+    padding: 1rem;
+  }
+  
+  .asset-title {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .asset-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .asset-user img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    margin-right: 0.5rem;
+  }
+  
+  .asset-user-name {
+    font-size: 0.875rem;
+    color: #374151;
+    font-weight: 500;
+  }
+  

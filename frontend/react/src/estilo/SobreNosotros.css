@@ -1,0 +1,116 @@
+.sobre-nosotros-page {
+    background-color: var(--background);
+    color: var(--text-primary);
+  }
+  
+  .sobre-nosotros-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    margin-top: 2em;
+  }
+  
+  .columna {
+    flex: 1;
+    min-width: 300px;
+    margin-top: 2em;
+  }
+  
+  .izquierda h1 {
+    font-size: var(--text-xxl);
+    margin-bottom: 1rem;
+  }
+  
+  .intro {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .equipo-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--foreground);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  
+  .equipo-tabla th,
+  .equipo-tabla td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  
+  .equipo-tabla th {
+    background-color: var(--primary);
+    color: var(--text-button);
+  }
+  
+  .card-sobre {
+    background-color: var(--foreground);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+  }
+  
+  .card-sobre h2 {
+    margin-bottom: 1rem;
+    font-size: var(--text-xl);
+  }
+  
+  .card-sobre ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+  }
+  
+  .card-sobre p,
+  .card-sobre li {
+    line-height: 1.6;
+  }
+
+
+  .tech-box {
+    text-align: left; 
+    padding: 2rem;
+    background-color: var(--foreground);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+
+
+  .sobre-nosotros {
+    display: flex;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .columna {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+  }
+  
+  .columna h1,
+  .columna h2 {
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .columna p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  
+  

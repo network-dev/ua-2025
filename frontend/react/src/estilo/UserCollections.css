@@ -1,0 +1,66 @@
+.user-collections-buttons { 
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    button {
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .user-collections-buttons  {
+        flex-direction: column;
+    }
+}
+
+.user-collections-button-edit{
+    background-color: var(--warning);
+    &:hover{
+        background-color: var(--warning-hover);
+    }
+}
+
+.user-collections-button-delete{
+    background-color: var(--danger);
+    &:hover{
+        background-color: var(--danger-hover);
+    }
+}
+
+.user-collections-button-delete-asset{
+    padding: .6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.user-collections-collection-card{
+    display: flex;
+    flex-direction: column;
+    background: var(--foreground);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 20%;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.user-collections-descripion {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.user-collections-property-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+
+}

@@ -1,0 +1,62 @@
+.perfil-menu {
+  width: 220px;
+  background: var(--foreground);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  font-family: inherit;
+  margin-left: 2rem;
+}
+
+.perfil-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.perfil-menu li {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.perfil-menu li:hover {
+  background: var(--foreground-hover);
+  color: var(--primary);
+}
+
+.perfil-menu .activo {
+  background: var(--primary-transparent);
+  color: var(--sidebar-active-text);
+  font-weight: 600;
+}
+
+/* .perfil-menu .cerrar-sesion {
+  margin-top: 2rem;
+  width: calc(100% - 3rem);
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+} */
+
+/* .perfil-menu .cerrar-sesion:hover {
+  background: var(--primary-hover);
+} */
+

@@ -1,0 +1,71 @@
+.likebutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.likebutton-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  transition: 100ms;
+}
+  
+.likebutton-checkmark {
+  top: 0;
+  left: 0;
+  height: 2em;
+  width: 2em;
+  transition: 100ms;
+  animation: dislike_effect 300ms ease;
+}
+
+.likebutton-container .likebutton-checkmark path {
+    fill: var(--text-button);
+    stroke: var(--text-primary);
+}
+
+.likebutton-container input:checked ~ .likebutton-checkmark path {
+  fill: #ff5353;
+  stroke-width: 0;
+}
+
+.likebutton-container input:checked ~ .likebutton-checkmark {
+  animation: like_effect 300ms ease;
+}
+
+.likebutton-container:hover {
+  transform: scale(1.likebutton-1);
+}
+
+@keyframes like_effect {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.likebutton-2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dislike_effect {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.likebutton-2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
