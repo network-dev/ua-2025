@@ -2,7 +2,21 @@
 
 ## Descripción
 
-Una plataforma de almacenamiento de assets multimedia que admite los formatos de archivo más comunes y ofrece potentes filtros de búsqueda adaptados a cada tipo de contenido. 
+Una plataforma de almacenamiento y compartición de assets multimedia para la empresa ficticia MoLaMaZoGaMeS. La web admite subir recursos de 5 categorías:
+- Assets 2D
+- Assets 3D
+- Audio
+- Video
+- Scripts 
+Se pueden subir los formatos de archivo más comunes y ofrece potentes filtros de búsqueda adaptados a cada tipo de contenido. También permite la creación y de colecciones privadas para organizar el contenido del usuario.
+
+## Tecnologías
+
+Se ha usado el stack MERN para el desarrollo de este servicio:
+- MongoDB como sistema de BD.
+- Express.js para el backend.
+- React.js para el frontend.
+- Node.js como entorno de desarrollo.
 
 ## **Autores**
 
@@ -190,3 +204,6 @@ Una plataforma de almacenamiento de assets multimedia que admite los formatos de
 | `GET /megustas/user/:assetId`            | GET    | Token JWT. Obtener me gustas de un usuario y asset específico.            |
 | `POST /megustas`                         | POST   | Token JWT. Crear un nuevo me gusta.                                       |
 | `DELETE /megustas/`                      | DELETE | Token JWT. Eliminar un me gusta de un asset escrito por un usuario.       |
+
+## Notas
+Este servicio se desarrolló como proyecto final de la asignatura **Usabilidad y Accesibilidad** en el grado de Ingeniería Multimedia de la Universidad de Alicante. 
