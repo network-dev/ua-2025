@@ -1,5 +1,7 @@
 # 🏗️ Usabilidad y Accesibilidad 2025  
 
+![Modo claro](readme-img/Light_mode.png)
+
 ## Descripción
 
 Una plataforma de almacenamiento y compartición de assets multimedia para la empresa ficticia MoLaMaZoGaMeS. La web admite subir recursos de 5 categorías:
@@ -9,6 +11,7 @@ Una plataforma de almacenamiento y compartición de assets multimedia para la em
 - Video
 - Scripts 
 Se pueden subir los formatos de archivo más comunes y ofrece potentes filtros de búsqueda adaptados a cada tipo de contenido. También permite la creación y de colecciones privadas para organizar el contenido del usuario.
+
 
 ## Tecnologías
 
@@ -205,5 +208,31 @@ Se ha usado el stack MERN para el desarrollo de este servicio:
 | `POST /megustas`                         | POST   | Token JWT. Crear un nuevo me gusta.                                       |
 | `DELETE /megustas/`                      | DELETE | Token JWT. Eliminar un me gusta de un asset escrito por un usuario.       |
 
+## 👁️ Modos de visualización
+
+Este proyecto ha sido diseñado priorizando la accesibilidad y la usabilidad, 
+incluyendo varios modos de visualización adaptados a diferentes necesidades y público.
+
+### Modo Claro
+Modo de visualización por defecto con fondo claro, texto oscuro y color acento morado.
+
+![Modo claro](readme-img/Light_mode.png)
+
+### Modo Oscuro
+Modo de visualización diseñado para reducir la fatiga visual en entornos con poca luz.
+
+![Modo oscuro](readme-img/Dark_mode.png)
+
+### Modo Tritanopia
+La tritanopia es un tipo de daltonismo que dificulta la percepción de los colores azul y amarillo. 
+En este modo, el color acento de la aplicación se sustituye por un rojo oscuro para mejorar la visibilidad.
+
+![Modo tritanopia](readme-img/Tritanopia_mode.png)
+
+### Modo Dislexia
+Utiliza una tipografía especial diseñada para mejorar la legibilidad en personas con dislexia.
+
+![Modo dislexia](readme-img/Dyslexic_mode.png)
+
 ## Notas
-Este servicio se desarrolló como proyecto final de la asignatura **Usabilidad y Accesibilidad** en el grado de Ingeniería Multimedia de la Universidad de Alicante. 
+Este servicio se desarrolló como proyecto final de la asignatura **Usabilidad y Accesibilidad** en el grado de **Ingeniería Multimedia** de la Universidad de Alicante. 
