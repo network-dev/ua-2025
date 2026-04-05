@@ -235,4 +235,4 @@ Utiliza una tipografía especial diseñada para mejorar la legibilidad en person
 ![Modo dislexia](readme-img/Dyslexic_mode.png)
 
 ## Notas
-Este servicio se desarrolló como proyecto final de la asignatura **Usabilidad y Accesibilidad** en el grado de **Ingeniería Multimedia** de la Universidad de Alicante. 
+Este servicio se desarrolló como proyecto final de la asignatura **Usabilidad y Accesibilidad** en el grado de **Ingeniería Multimedia** de la Universidad de Alicante. Todos los derechos reservados.
